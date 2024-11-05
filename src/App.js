@@ -80,19 +80,19 @@ function App() {
         {mouse && (
           <div
             style={{
-              width: '50%',
+              width: 'fit-content',
               position: 'absolute',
               pointerEvents: 'none', 
               textAlign: 'center',
-              backgroundColor: 'black',
-              color: 'white',
+              backgroundColor:'black',
+             color: 'white',
+             padding:'2px',
              
-             
-              ...(toolTip === 'Left' && { left: '-100px', top: '0' }),
-              ...(toolTip === 'Right' && { right: '-100px', top: '0' }),
-              ...(toolTip === 'Top' && { bottom: '50px', left: '25%', }),
-              ...(toolTip === 'Down' && { top: '50px', right: '25%',  }),
-              ...(toolTip === '' && { bottom: '50px'  }),
+              ...(toolTip === 'Left' && { left: '15%', top: '0' }),
+              ...(toolTip === 'Right' && { right: '14%', top: '0' }),
+              ...(toolTip === 'Top' && { bottom: '50px',  }),
+              ...(toolTip === 'Down' && { top: '50px',   }),
+              ...(toolTip === '' && { bottom: '40px' , right: '15%',  }),
             }}
           >
             {toolTip ? `Thanks for hovering ${toolTip} Position` : 'Thanks for hovering! I am a ToolTip'}

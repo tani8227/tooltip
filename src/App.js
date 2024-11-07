@@ -1,6 +1,8 @@
 import { useState } from 'react';
 
-function App() {
+function App() 
+{
+
   const [toolTip, setToolTip] = useState('');
   const [btnLeftColor, setBtnLeftColor] = useState();
   const [btnRightColor, setBtnRightColor] = useState();
@@ -8,6 +10,7 @@ function App() {
   const [btnDownColor, setBtnDownColor] = useState();
   const [mouse, setMouse] = useState(false);
 
+  // setting tooltip message and posstion
   function toolTipLeftSetter(msg) {
     setToolTip(msg);
     setBtnLeftColor('red');
@@ -16,6 +19,7 @@ function App() {
     setBtnDownColor('');
   }
 
+    // setting tooltip message and posstion
   function toolTipRightSetter(msg) {
     setToolTip(msg);
     setBtnLeftColor('');
@@ -24,6 +28,7 @@ function App() {
     setBtnDownColor('');
   }
 
+    // setting tooltip message and posstion
   function toolTipTopSetter(msg) {
     setToolTip(msg);
     setBtnLeftColor('');
@@ -32,6 +37,7 @@ function App() {
     setBtnDownColor('');
   }
 
+    // setting tooltip message and posstion
   function toolTipDownSetter(msg) {
     setToolTip(msg);
     setBtnLeftColor('');
@@ -40,11 +46,12 @@ function App() {
     setBtnDownColor('red');
   }
 
-  
+  // function to check the hovering on button
   function check() {
     setMouse(true);
   }
 
+    // function to check the hovering on button
   function recheck() {
     setTimeout(() => setMouse(false), 200); 
   }
@@ -85,8 +92,8 @@ function App() {
               pointerEvents: 'none', 
               textAlign: 'center',
               backgroundColor:'black',
-             color: 'white',
-             padding:'2px',
+              color: 'white',
+               padding:'2px',
              
               ...(toolTip === 'Left' && { left: '15%', top: '0' }),
               ...(toolTip === 'Right' && { right: '14%', top: '0' }),
